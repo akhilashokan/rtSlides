@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "rtslides/rtslide",
+	"version": "1.0.0",
+	"title": "rtSlides",
+	"category": "media",
+	"icon": "slides",
+	"description": "Slidshow plugin made for rtCamp test",
+	"textdomain": "rtSlides",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
