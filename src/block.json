@@ -10,5 +10,11 @@
 	"textdomain": "rtSlides",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"attributes": {
+		"link": {
+			"type": "string",
+			"default": "https://wptavern.com/wp-json/wp/v2/posts"
+		}
+	}
 }
