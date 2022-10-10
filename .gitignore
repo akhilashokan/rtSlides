@@ -5,6 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 /node_modules
 .npm
+/build
 
 # Optional eslint cache
 .eslintcache
