@@ -1,40 +1,83 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls
+} from '@wordpress/block-editor';
+import apiFetch from '@wordpress/api-fetch';
+import {
+	TextControl,
+	PanelBody,
+	PanelRow,
+	ToggleControl
+} from "@wordpress/components"
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Swiper from 'swiper';
+import 'swiper/css';
+export default function Edit({ attributes, setAttributes }) {
+	const blockProps = useBlockProps()
+	const testchange = (data) => {
+		setAttributes({ "link": data })
+	}
+	const [list, setList] = useState(null)
+	useEffect(() => {
+		fetch(attributes.link)
+			.then(data => data.json())
+			.then(res => {
+				console.log(res)
+				setList(res)
+				initSwiper()
+			})
+	}, [attributes.link])
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+	const initSwiper = () => {
+		const swiper = new Swiper('.rt_swiper', {
+			direction: 'horizontal',
+			loop: true,
+		})
+	}
+
 	return (
-		<div {...useBlockProps()}>
-			<h1>
-				test
-			</h1>
-		</div>
+		<div {...blockProps}>
+			<h1>rtSlides</h1>
+			{list ? '' : <h2>...loading</h2>}
+
+			{list && <div className='rt_slides rt_swiper'>
+				<div className='rt_wrapper swiper-wrapper'>
+					{list && list.map((value, key) => {
+						console.log(value);
+						return <div className='rt_slide swiper-slide'>
+							<h2>{value.id}</h2>
+						</div>
+					})}
+				</div>
+			</div>}
+
+
+			< InspectorControls >
+				<PanelBody
+					title={__("Data Url")}
+					initialOpen={true}
+				>
+					<PanelRow>
+						<fieldset>
+
+							<TextControl
+								label={__('Data url')}
+								value={attributes.link}
+								onChange={testchange}
+								help={__('data fetch location')}
+							/>
+						</fieldset>
+
+					</PanelRow>
+				</PanelBody>
+
+			</InspectorControls>
+
+		</div >
 	);
 }
