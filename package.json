@@ -16,8 +16,5 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^24.3.0"
-	},
-	"dependencies": {
-		"swiper": "^8.4.3"
 	}
 }
