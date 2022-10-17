@@ -11,10 +11,14 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
+  "script": "file:./rtSlides.js",
   "attributes": {
     "link": {
       "type": "string",
       "default": "https://wptavern.com/wp-json/wp/v2/posts"
+    },
+    "data": {
+      "type": "array"
     }
   }
 }
