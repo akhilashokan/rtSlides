@@ -5,8 +5,8 @@ export default function save({ attributes }) {
 	return (
 		<div {...blockProps}>
 			<h1>rtSlides</h1>
-			<div className="rt_slides ">
-				<div className="rt_wrapper ">
+			<div className="rt_slides">
+				<div className="rt_wrapper" >
 					{attributes.data.map((value, key) => {
 						return (
 							<div className="rt_slide ">
@@ -14,6 +14,10 @@ export default function save({ attributes }) {
 							</div>
 						);
 					})}
+				</div>
+				<div className='rt_navigation'>
+					<span className='rt_nav_left' accessKey='left'>{"<"}</span>
+					<span className='rt_nav_right' accessKey='right'>{">"}</span>
 				</div>
 			</div>
 		</div>
