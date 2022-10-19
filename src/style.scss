@@ -13,12 +13,12 @@
 
 .rt_slides {
 	outline: 1px solid green;
+	overflow: hidden;
 }
 
 .rt_wrapper {
 	display: flex;
 	transition: 0.5s;
-
 }
 
 .rt_slide {
