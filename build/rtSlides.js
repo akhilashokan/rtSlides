@@ -1,1 +1,63 @@
-!function(){document.addEventListener("readystatechange",(()=>{"complete"===document.readyState&&function(){const t=document.querySelector(".rt_slides"),n=document.querySelector(".rt_wrapper"),r=n.getBoundingClientRect().width,c=(n.childElementCount-1)*r;(function(t,n,r,c){t.querySelector(".rt_navigation").addEventListener("click",(t=>{"right"===t.target.accessKey&&e<c&&(e+=r),"left"===t.target.accessKey&&e>=0&&(e-=r),n.style.transform=`translateX(-${e}px)`}))})(t,n,r,c),function(t,n,r){document.addEventListener("keydown",(c=>{let{key:a}=c;"ArrowRight"===a&&e<r&&(e+=n),"ArrowLeft"===a&&e>=0&&(e-=n),t.style.transform=`translateX(-${e}px)`}))}(n,r,c)}()}));var e=0}();
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*************************!*\
+  !*** ./src/rtSlides.js ***!
+  \*************************/
+document.addEventListener('readystatechange', () => {
+  if (document.readyState === 'complete') {
+    load();
+  }
+});
+
+function load() {
+  const slides = document.querySelector('.rt_slides');
+  const wrapper = document.querySelector('.rt_wrapper');
+  const width = wrapper.getBoundingClientRect().width;
+  const max = (wrapper.childElementCount - 1) * width;
+  rtSlideNav(slides, wrapper, width, max);
+  keyListener(wrapper, width, max); // touchListner()
+}
+
+var xPos = 0;
+
+function rtSlideNav(slidesContainer, wrapper, width, max) {
+  let nav = slidesContainer.querySelector('.rt_navigation');
+  nav.addEventListener('click', e => {
+    if (e.target.accessKey === 'right' && xPos < max) {
+      xPos += width;
+    }
+
+    if (e.target.accessKey === 'left' && xPos >= 0) {
+      xPos -= width;
+    }
+
+    wrapper.style.transform = `translateX(-${xPos}px)`;
+  });
+}
+
+function keyListener(wrapper, width, max) {
+  document.addEventListener('keydown', _ref => {
+    let {
+      key
+    } = _ref;
+
+    if (key === 'ArrowRight' && xPos < max) {
+      xPos += width;
+    }
+
+    if (key === 'ArrowLeft' && xPos >= 0) {
+      xPos -= width;
+    }
+
+    wrapper.style.transform = `translateX(-${xPos}px)`;
+  });
+} // function touchListner() {
+//     wrapper.addEventListener("touchmove", (e) => {
+//         let xPos = e.touches[0].clientX
+//         console.log(e.touches[0].clientX);
+//         wrapper.style.transform = `translateX(${xPos}px)`
+//     }, { passive: true })
+// }
+/******/ })()
+;
+//# sourceMappingURL=rtSlides.js.map

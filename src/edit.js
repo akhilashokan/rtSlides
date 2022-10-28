@@ -1,7 +1,6 @@
 import { __ } from '@wordpress/i18n';
 
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import apiFetch from '@wordpress/api-fetch';
 import {
 	TextControl,
 	PanelBody,
@@ -11,7 +10,6 @@ import {
 
 import './editor.scss';
 import { useEffect } from 'react';
-import { useState } from 'react';
 import { useRef } from 'react';
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
@@ -27,10 +25,10 @@ export default function Edit({ attributes, setAttributes }) {
 			});
 	}, [attributes.link]);
 
-	const rtWrapperRef = useRef()
+	const rtWrapperRef = useRef();
 	return (
 		<div {...blockProps}>
-			<h1>rtSlides</h1>
+			<h1 style={{ fontSize: '2rem' }} >rtSlides</h1>
 			{attributes.data ? '' : <h2>...loading</h2>}
 
 			{attributes.data && (
@@ -38,16 +36,26 @@ export default function Edit({ attributes, setAttributes }) {
 					<div className="rt_wrapper" ref={rtWrapperRef}>
 						{attributes.data &&
 							attributes.data.map((value, key) => {
+								console.log(value);
 								return (
 									<div className="rt_slide">
-										<h2>{value.id}</h2>
+										<header>
+											<h2>{value.title.rendered}</h2>
+										</header>
+										<img
+											src={value.episode_featured_image}
+										/>
 									</div>
 								);
 							})}
 					</div>
-					<div className='rt_navigation'>
-						<span className='rt_nav_left' accessKey='left'>{"<"}</span>
-						<span className='rt_nav_right' accessKey='right'>{">"}</span>
+					<div className="rt_navigation">
+						<span className="rt_nav_left" accessKey="left">
+							{'<'}
+						</span>
+						<span className="rt_nav_right" accessKey="right">
+							{'>'}
+						</span>
 					</div>
 				</div>
 			)}

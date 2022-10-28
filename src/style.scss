@@ -1,19 +1,10 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
-
-.wp-block-create-block-starter-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
-}
-
 .rt_slides {
 	outline: 1px solid green;
 	overflow: hidden;
+
+	& * {
+		box-sizing: border-box;
+	}
 }
 
 .rt_wrapper {
@@ -23,4 +14,15 @@
 
 .rt_slide {
 	flex: 0 0 100%;
+	max-width: 100%;
+	padding: 1rem;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+.rt_title {
+	font-size: 2rem;
 }

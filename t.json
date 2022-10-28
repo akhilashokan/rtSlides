@@ -1,0 +1,176 @@
+{
+    "id": 138957,
+    "date": "2022-10-27T20:48:15",
+    "date_gmt": "2022-10-28T00:48:15",
+    "guid": {
+        "rendered": "https://wptavern.com/?p=138957"
+    },
+    "modified": "2022-10-27T20:48:16",
+    "modified_gmt": "2022-10-28T00:48:16",
+    "slug": "gutenberg-14-4-introduces-distraction-free-mode-redesigns-pattern-inserter",
+    "status": "publish",
+    "type": "post",
+    "link": "https://wptavern.com/gutenberg-14-4-introduces-distraction-free-mode-redesigns-pattern-inserter",
+    "title": {
+        "rendered": "Gutenberg 14.4 Introduces Distraction-Free Mode, Redesigns Pattern Inserter"
+    },
+    "content": {
+        "rendered": "\n<p><a href=\"https://make.wordpress.org/core/2022/10/27/whats-new-in-gutenberg-14-4-26-october/\">Gutenberg 14.4</a> was released today with long-awaited support for distraction-free editing, to the delight of content editors around the world. It hides all non-essential UI and clears the canvas for a focus on text-based content creation. </p>\n\n\n\n<p>The mode can be toggled on in the options menu in the top toolbar. Distraction-free mode hides the top toolbar, any open sidebars, along with the insertion point indicator and the block toolbar.</p>\n\n\n\n<figure class=\"wp-block-video\"><video controls src=\"https://wptavern.com/wp-content/uploads/2022/10/Distraction-free-mode-1.mp4\"></video><figcaption class=\"wp-element-caption\">source: <a href=\"https://make.wordpress.org/core/2022/10/27/whats-new-in-gutenberg-14-4-26-october/\">Gutenberg 14.4 release post</a></figcaption></figure>\n\n\n\n<p>The project to improve the editing experience for text-based content began with <a href=\"https://wptavern.com/gutenberg-contributors-begin-early-exploration-of-a-new-distraction-free-mode\">early explorations</a> in February, which <a href=\"https://wptavern.com/gutenberg-contributors-make-progress-on-distraction-free-mode\">progressed</a> into a <a href=\"https://github.com/WordPress/gutenberg/pull/41740\">PR</a> that contributors have been refining for the last few months. This distraction-free mode is a monumental improvement over the days when users struggled to write with various UI elements popping in and out of view.</p>\n\n\n\n<p>Another major update in 14.4 is the <a href=\"https://github.com/WordPress/gutenberg/pull/44028\">redesigned pattern inserter</a>. It has been updated to show the categories before rendering the patterns, giving users a more fluid visual preview as they browse the pattern library. Patterns can be dragged and dropped from the preview pane into the canvas.</p>\n\n\n\n<figure class=\"wp-block-video\"><video controls src=\"https://wptavern.com/wp-content/uploads/2022/10/Patterns.mp4\"></video><figcaption class=\"wp-element-caption\">source: <a href=\"https://make.wordpress.org/core/2022/10/27/whats-new-in-gutenberg-14-4-26-october/\">Gutenberg 14.4 release post</a></figcaption></figure>\n\n\n\n<p>Other notable improvements users may notice include the following:</p>\n\n\n\n<ul>\n<li>Image Block: new toolbar button to <a href=\"https://github.com/WordPress/gutenberg/pull/44965\">add a caption</a></li>\n\n\n\n<li>Block Locking: <a href=\"https://github.com/WordPress/gutenberg/pull/44739\">Added content locking to the navigation block</a></li>\n\n\n\n<li>Many improvements to fluid typography, including <a href=\"https://github.com/WordPress/gutenberg/pull/44765\">automatically converting custom font sizes to fluid values</a> when “settings.typography.fluid” is set to true</li>\n\n\n\n<li>Inserter: <a href=\"https://github.com/WordPress/gutenberg/pull/44711\">Add a more pronounced hover effect</a></li>\n</ul>\n\n\n\n<p>Performance benchmarks show an improvement in loading time for both the post and site editors. Check out the <a href=\"https://make.wordpress.org/core/2022/10/27/whats-new-in-gutenberg-14-4-26-october/\">release post</a> to see the full list of all the changes and bug fixes included in 14.4. This release will not be included in the upcoming WordPress 6.1 release next week, but users who are eager to adopt these new features can get them right now in the <a href=\"https://wordpress.org/plugins/gutenberg/\">Gutenberg plugin</a>.</p>\n",
+        "protected": false
+    },
+    "excerpt": {
+        "rendered": "<p>Gutenberg 14.4 was released today with long-awaited support for distraction-free editing, to the delight of [&hellip;]</p>\n",
+        "protected": false
+    },
+    "author": 11,
+    "featured_media": 138976,
+    "comment_status": "open",
+    "ping_status": "closed",
+    "sticky": false,
+    "template": "",
+    "format": "standard",
+    "meta": {
+        "episode_type": "audio",
+        "audio_file": "",
+        "transcript_file": "",
+        "podmotor_file_id": "",
+        "cover_image": "",
+        "cover_image_id": "",
+        "duration": "",
+        "filesize": "",
+        "filesize_raw": "",
+        "date_recorded": "",
+        "explicit": "",
+        "block": "",
+        "jetpack_post_was_ever_published": false,
+        "jetpack_publicize_message": "",
+        "jetpack_is_tweetstorm": false,
+        "jetpack_publicize_feature_enabled": true
+    },
+    "categories": [
+        97
+    ],
+    "tags": [],
+    "series": [],
+    "jetpack_publicize_connections": [],
+    "episode_featured_image": "https://wptavern.com/wp-content/uploads/2022/10/rocks.jpeg",
+    "episode_player_image": "https://wptavern.com/wp-content/uploads/2021/02/1045657e-7764-4ccf-8fa2-0f38b64f4fd8.jpg",
+    "download_link": false,
+    "player_link": false,
+    "audio_player": false,
+    "episode_data": {
+        "playerMode": "dark",
+        "subscribeUrls": {
+            "apple_podcasts": {
+                "key": "apple_podcasts",
+                "url": "",
+                "label": "Apple Podcasts",
+                "class": "apple_podcasts",
+                "icon": "apple-podcasts.png"
+            },
+            "stitcher": {
+                "key": "stitcher",
+                "url": "",
+                "label": "Stitcher",
+                "class": "stitcher",
+                "icon": "stitcher.png"
+            },
+            "google_podcasts": {
+                "key": "google_podcasts",
+                "url": "",
+                "label": "Google Podcasts",
+                "class": "google_podcasts",
+                "icon": "google-podcasts.png"
+            },
+            "spotify": {
+                "key": "spotify",
+                "url": "",
+                "label": "Spotify",
+                "class": "spotify",
+                "icon": "spotify.png"
+            }
+        },
+        "rssFeedUrl": "https://wptavern.com/feed/podcast",
+        "embedCode": "<blockquote class=\"wp-embedded-content\" data-secret=\"oiTIPSDcBF\"><a href=\"https://wptavern.com/gutenberg-14-4-introduces-distraction-free-mode-redesigns-pattern-inserter\">Gutenberg 14.4 Introduces Distraction-Free Mode, Redesigns Pattern Inserter</a></blockquote><iframe sandbox=\"allow-scripts\" security=\"restricted\" src=\"https://wptavern.com/gutenberg-14-4-introduces-distraction-free-mode-redesigns-pattern-inserter/embed#?secret=oiTIPSDcBF\" width=\"500\" height=\"350\" title=\"&#8220;Gutenberg 14.4 Introduces Distraction-Free Mode, Redesigns Pattern Inserter&#8221; &#8212; WP Tavern\" data-secret=\"oiTIPSDcBF\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" class=\"wp-embedded-content\"></iframe><script>\n/*! This file is auto-generated */\n!function(c,l){\"use strict\";var e=!1,o=!1;if(l.querySelector)if(c.addEventListener)e=!0;if(c.wp=c.wp||{},c.wp.receiveEmbedMessage);else if(c.wp.receiveEmbedMessage=function(e){var t=e.data;if(!t);else if(!(t.secret||t.message||t.value));else if(/[^a-zA-Z0-9]/.test(t.secret));else{for(var r,s,a,i=l.querySelectorAll('iframe[data-secret=\"'+t.secret+'\"]'),n=l.querySelectorAll('blockquote[data-secret=\"'+t.secret+'\"]'),o=0;o<n.length;o++)n[o].style.display=\"none\";for(o=0;o<i.length;o++)if(r=i[o],e.source!==r.contentWindow);else{if(r.removeAttribute(\"style\"),\"height\"===t.message){if(1e3<(s=parseInt(t.value,10)))s=1e3;else if(~~s<200)s=200;r.height=s}if(\"link\"===t.message)if(s=l.createElement(\"a\"),a=l.createElement(\"a\"),s.href=r.getAttribute(\"src\"),a.href=t.value,a.host===s.host)if(l.activeElement===r)c.top.location.href=t.value}}},e)c.addEventListener(\"message\",c.wp.receiveEmbedMessage,!1),l.addEventListener(\"DOMContentLoaded\",t,!1),c.addEventListener(\"load\",t,!1);function t(){if(o);else{o=!0;for(var e,t,r,s=-1!==navigator.appVersion.indexOf(\"MSIE 10\"),a=!!navigator.userAgent.match(/Trident.*rv:11\\./),i=l.querySelectorAll(\"iframe.wp-embedded-content\"),n=0;n<i.length;n++){if(!(r=(t=i[n]).getAttribute(\"data-secret\")))r=Math.random().toString(36).substr(2,10),t.src+=\"#?secret=\"+r,t.setAttribute(\"data-secret\",r);if(s||a)(e=t.cloneNode(!0)).removeAttribute(\"security\"),t.parentNode.replaceChild(e,t);t.contentWindow.postMessage({message:\"ready\",secret:r},\"*\")}}}}(window,document);\n</script>\n"
+    },
+    "jetpack_featured_media_url": "https://wptavern.com/wp-content/uploads/2022/10/rocks.jpeg",
+    "jetpack_likes_enabled": true,
+    "jetpack_sharing_enabled": true,
+    "jetpack_shortlink": "https://wp.me/pBMYe-A9f",
+    "_links": {
+        "self": [
+            {
+                "href": "https://wptavern.com/wp-json/wp/v2/posts/138957"
+            }
+        ],
+        "collection": [
+            {
+                "href": "https://wptavern.com/wp-json/wp/v2/posts"
+            }
+        ],
+        "about": [
+            {
+                "href": "https://wptavern.com/wp-json/wp/v2/types/post"
+            }
+        ],
+        "author": [
+            {
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/users/11"
+            }
+        ],
+        "replies": [
+            {
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/comments?post=138957"
+            }
+        ],
+        "version-history": [
+            {
+                "count": 14,
+                "href": "https://wptavern.com/wp-json/wp/v2/posts/138957/revisions"
+            }
+        ],
+        "predecessor-version": [
+            {
+                "id": 138978,
+                "href": "https://wptavern.com/wp-json/wp/v2/posts/138957/revisions/138978"
+            }
+        ],
+        "wp:featuredmedia": [
+            {
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/media/138976"
+            }
+        ],
+        "wp:attachment": [
+            {
+                "href": "https://wptavern.com/wp-json/wp/v2/media?parent=138957"
+            }
+        ],
+        "wp:term": [
+            {
+                "taxonomy": "category",
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/categories?post=138957"
+            },
+            {
+                "taxonomy": "post_tag",
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/tags?post=138957"
+            },
+            {
+                "taxonomy": "series",
+                "embeddable": true,
+                "href": "https://wptavern.com/wp-json/wp/v2/series?post=138957"
+            }
+        ],
+        "curies": [
+            {
+                "name": "wp",
+                "href": "https://api.w.org/{rel}",
+                "templated": true
+            }
+        ]
+    }
+}
