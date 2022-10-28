@@ -1,1 +1,1 @@
-.wp-block-create-block-starter-block{background-color:#21759b;color:#fff;padding:2px}.rt_slides{outline:1px solid green}.rt_wrapper{display:flex;transition:.5s}.rt_slide{flex:0 0 100%}
+.rt_slides{outline:1px solid green;overflow:hidden}.rt_slides *{box-sizing:border-box}.rt_wrapper{display:flex;transition:.5s}.rt_slide{flex:0 0 100%;padding:1rem}.rt_slide,img{max-width:100%}.rt_title{font-size:2rem}
