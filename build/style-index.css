@@ -4,6 +4,7 @@
 .rt_slides {
   outline: 1px solid green;
   overflow: hidden;
+  position: relative;
 }
 .rt_slides * {
   box-sizing: border-box;
@@ -26,6 +27,50 @@ img {
 
 .rt_title {
   font-size: 2rem;
+}
+
+.rt_navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rt_nav_left,
+.rt_nav_right {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.rt_nav_left::before,
+.rt_nav_right::before {
+  content: "";
+  border: 1rem solid transparent;
+  position: absolute;
+  transition: 0.2s;
+}
+
+.rt_nav_left::before {
+  border-right: 1rem solid #333;
+  left: 0;
+}
+.rt_nav_left:hover::before {
+  transform: translateX(-10%);
+}
+
+.rt_nav_right::before {
+  border-left: 1rem solid #333;
+  right: 0;
+}
+.rt_nav_right:hover::before {
+  transform: translateX(10%);
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -37,7 +37,7 @@ function Edit(_ref) {
   } = _ref;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
 
-  const testchange = data => {
+  const linkChange = data => {
     setAttributes({
       link: data
     });
@@ -82,7 +82,7 @@ function Edit(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("fieldset", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Data url'),
     value: attributes.link,
-    onChange: testchange,
+    onChange: linkChange,
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('data fetch location')
   }))))));
 }
@@ -176,9 +176,10 @@ function save(_ref) {
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("header", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
       className: "rt_title"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-      target: "_blank",
+      target: '_blank',
+      rel: 'noopener',
       href: value.link
-    }, value.title.rendered), " "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, new Date(value.date).toLocaleDateString())), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    }, value.title.rendered)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, new Date(value.date).toLocaleDateString())), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       className: "rt_img",
       src: value.episode_featured_image
     }));

@@ -8,19 +8,20 @@ document.addEventListener('readystatechange', () => {
     load();
   }
 });
+var xPos = 0;
+var width = 0;
+var max = 0;
 
 function load() {
   const slides = document.querySelector('.rt_slides');
   const wrapper = document.querySelector('.rt_wrapper');
-  const width = wrapper.getBoundingClientRect().width;
-  const max = (wrapper.childElementCount - 1) * width;
-  rtSlideNav(slides, wrapper, width, max);
-  keyListener(wrapper, width, max); // touchListner()
+  width = wrapper.getBoundingClientRect().width;
+  max = (wrapper.childElementCount - 1) * width;
+  rtSlideNav(slides, wrapper);
+  keyListener(wrapper); // touchListner()
 }
 
-var xPos = 0;
-
-function rtSlideNav(slidesContainer, wrapper, width, max) {
+function rtSlideNav(slidesContainer, wrapper) {
   let nav = slidesContainer.querySelector('.rt_navigation');
   nav.addEventListener('click', e => {
     if (e.target.accessKey === 'right' && xPos < max) {
@@ -35,7 +36,7 @@ function rtSlideNav(slidesContainer, wrapper, width, max) {
   });
 }
 
-function keyListener(wrapper, width, max) {
+function keyListener(wrapper) {
   document.addEventListener('keydown', _ref => {
     let {
       key
