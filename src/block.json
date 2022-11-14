@@ -19,6 +19,14 @@
 		},
 		"data": {
 			"type": "array"
+		},
+		"font": {
+			"type": "string",
+			"default": "1rem"
+		},
+		"btnColor": {
+			"type": "string",
+			"default": "#333"
 		}
 	}
 }

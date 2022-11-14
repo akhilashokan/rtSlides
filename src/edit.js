@@ -1,11 +1,10 @@
 import { __ } from '@wordpress/i18n';
 
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, ColorPalette } from '@wordpress/block-editor';
 import {
 	TextControl,
 	PanelBody,
 	PanelRow,
-	ToggleControl,
 } from '@wordpress/components';
 
 import './editor.scss';
@@ -13,8 +12,14 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
-	const testchange = (data) => {
+	const linkChange = (data) => {
 		setAttributes({ link: data });
+	};
+	const fontChange = (data) => {
+		setAttributes({ font: data });
+	};
+	const btnColorChange = (data) => {
+		setAttributes({ btnColor: data });
 	};
 	useEffect(() => {
 		fetch(attributes.link)
@@ -28,7 +33,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const rtWrapperRef = useRef();
 	return (
 		<div {...blockProps}>
-			<h1 style={{ fontSize: '2rem' }} >rtSlides</h1>
+			<h1 style={{ fontSize: '2rem' }} title="This heading is only visible in editor" >rtSlides</h1>
 			{attributes.data ? '' : <h2>...loading</h2>}
 
 			{attributes.data && (
@@ -40,7 +45,7 @@ export default function Edit({ attributes, setAttributes }) {
 								return (
 									<div className="rt_slide">
 										<header>
-											<h2>{value.title.rendered}</h2>
+											<h2 style={{ fontSize: attributes.font }} >{value.title.rendered}</h2>
 										</header>
 										<img
 											src={value.episode_featured_image}
@@ -50,11 +55,9 @@ export default function Edit({ attributes, setAttributes }) {
 							})}
 					</div>
 					<div className="rt_navigation">
-						<span className="rt_nav_left" accessKey="left">
-							{'<'}
+						<span className="rt_nav_left" style={{ borderRightColor: attributes.btnColor }} accessKey="left">
 						</span>
-						<span className="rt_nav_right" accessKey="right">
-							{'>'}
+						<span className="rt_nav_right" style={{ borderLeftColor: attributes.btnColor }} accessKey="right">
 						</span>
 					</div>
 				</div>
@@ -67,8 +70,29 @@ export default function Edit({ attributes, setAttributes }) {
 							<TextControl
 								label={__('Data url')}
 								value={attributes.link}
-								onChange={testchange}
+								onChange={linkChange}
 								help={__('data fetch location')}
+							/>
+						</fieldset>
+					</PanelRow>
+					<PanelRow>
+						<fieldset>
+							<TextControl
+								label={__('Font Size')}
+								value={attributes.font}
+								onChange={fontChange}
+								help={__('content font size')}
+							/>
+						</fieldset>
+					</PanelRow>
+					<PanelRow>
+						<fieldset>
+							<legend>
+								{__('Button Color')}
+							</legend>
+							<ColorPalette
+								value={attributes.btnColor}
+								onChange={btnColorChange}
 							/>
 						</fieldset>
 					</PanelRow>

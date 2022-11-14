@@ -3,19 +3,23 @@ document.addEventListener('readystatechange', () => {
 		load();
 	}
 });
+var xPos = 0;
+var width = 0;
+var max = 0;
 
 function load() {
 	const slides = document.querySelector('.rt_slides');
 	const wrapper = document.querySelector('.rt_wrapper');
-	const width = wrapper.getBoundingClientRect().width;
-	const max = (wrapper.childElementCount - 1) * width;
-	rtSlideNav(slides, wrapper, width, max);
-	keyListener(wrapper, width, max);
-	// touchListner()
-}
-var xPos = 0;
+	width = wrapper.getBoundingClientRect().width;
+	max = (wrapper.childElementCount - 1) * width;
 
-function rtSlideNav(slidesContainer, wrapper, width, max) {
+	rtSlideNav(slides, wrapper);
+	keyListener(wrapper);
+
+}
+
+
+function rtSlideNav(slidesContainer, wrapper) {
 	let nav = slidesContainer.querySelector('.rt_navigation');
 	nav.addEventListener('click', (e) => {
 		if (e.target.accessKey === 'right' && xPos < max) {
@@ -28,7 +32,7 @@ function rtSlideNav(slidesContainer, wrapper, width, max) {
 	});
 }
 
-function keyListener(wrapper, width, max) {
+function keyListener(wrapper) {
 	document.addEventListener('keydown', ({ key }) => {
 		if (key === 'ArrowRight' && xPos < max) {
 			xPos += width;
@@ -40,10 +44,4 @@ function keyListener(wrapper, width, max) {
 	});
 }
 
-// function touchListner() {
-//     wrapper.addEventListener("touchmove", (e) => {
-//         let xPos = e.touches[0].clientX
-//         console.log(e.touches[0].clientX);
-//         wrapper.style.transform = `translateX(${xPos}px)`
-//     }, { passive: true })
-// }
+

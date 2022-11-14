@@ -1,6 +1,7 @@
 .rt_slides {
-	outline: 1px solid green;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	overflow: hidden;
+	position: relative;
 
 	& * {
 		box-sizing: border-box;
@@ -25,4 +26,42 @@ img {
 
 .rt_title {
 	font-size: 2rem;
+}
+
+.rt_navigation {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-bottom: 1rem;
+}
+
+.rt_nav_left,
+.rt_nav_right {
+	color: #fff;
+	position: relative;
+	cursor: pointer;
+	border: 1rem solid transparent;
+	user-select: none;
+	transition: 0.2s ease-in-out;
+
+}
+
+.rt_nav_left {
+	border-right-color: #333;
+
+	&:hover {
+		transform: translateX(-10%);
+	}
+}
+
+.rt_nav_right {
+	border-left-color: #333;
+
+	&:hover {
+		transform: translateX(10%);
+	}
 }
